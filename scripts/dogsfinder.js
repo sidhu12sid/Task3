@@ -10,8 +10,17 @@ function createData(names){
     var length = name.length;
     console.log(length)
     for(let i=0 ; i<length; i++){
-        const led = document.getElementById(images);
-        
+        fetch('https://dog.ceo/api/breed/'+name[i]+'/images/random')
+        .then((response)=>response.json())
+        .then((data)=>{
+            console.log(data);
+            im.src = data.message
+        })
+        const led = document.getElementById('images');
+        let line = document.createElement('div');
+        let im = document.createElement('img');
+        led.appendChild(line); 
+        line.appendChild(im)      
     }
 
 }
