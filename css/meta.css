@@ -1,0 +1,27 @@
+.navbar {
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+.navbar ul .logo {
+  width: 70px;
+  height: 70px;
+}
+.navbar ul .logo_head {
+  font-family: "Courier New", Courier, monospace;
+  font-size: x-large;
+}
+.navbar ul .form_li .search {
+  padding-left: 80px;
+}
+.navbar ul .form_li .search .search_box {
+  height: 30px;
+  width: 50rem;
+  margin-top: 20px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+}/*# sourceMappingURL=meta.css.map */
