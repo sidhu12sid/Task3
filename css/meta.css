@@ -30,5 +30,5 @@
 }
 * .images {
   display: grid;
-  grid-template-columns: repeat(5, 3fr);
+  grid-template-columns: repeat(5, 10fr);
 }/*# sourceMappingURL=meta.css.map */
