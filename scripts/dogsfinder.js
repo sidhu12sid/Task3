@@ -19,6 +19,7 @@ function createData(names){
         const led = document.getElementById('images');
         let line = document.createElement('div');
         let im = document.createElement('img');
+        im.setAttribute('style','object-fit:cover;height:100%;width:100%;')
         led.appendChild(line); 
         line.appendChild(im)      
     }
