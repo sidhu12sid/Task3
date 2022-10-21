@@ -18,10 +18,25 @@ function createData(names){
         })
         const led = document.getElementById('images');
         let line = document.createElement('div');
+        line.setAttribute('style','max-width:400px;max-height:400px')
+
         let im = document.createElement('img');
         im.setAttribute('style','object-fit:cover;width:100%;height:100%')
+
+        let head = document.createElement('h2');
+        head.innerHTML = name[i];
+        head.setAttribute('style','position:absolute;')
+
+        line.appendChild(head)
         led.appendChild(line); 
         line.appendChild(im)      
     }
 
 }
+
+//searchbar filtering
+
+const searchInput = document.getElementById("searchinput");
+
+const search = Object.keys()
+
