@@ -16,18 +16,21 @@
   font-family: "Courier New", Courier, monospace;
   font-size: x-large;
 }
+* .navbar ul .form_li .fa-search {
+  position: absolute;
+  padding-top: 32px;
+  padding-left: 12px;
+}
 * .navbar ul .form_li .search {
   padding-left: 80px;
 }
 * .navbar ul .form_li .search .search_box {
-  height: 30px;
-  width: 50rem;
   margin-top: 20px;
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: groove;
-  padding-left: 10px;
+  background-repeat: no-repeat;
+  width: 50rem;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 12px;
 }
 * .images {
   display: grid;
