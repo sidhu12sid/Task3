@@ -5,7 +5,9 @@
 //     }
 // }
 
-let dogList = [];
+let dogList = [];   //created an empty arry  
+
+//fetched the name and pushed into the empty array
 fetch('https://dog.ceo/api/breeds/list/all')
     .then((response) => response.json())
     .then(async (data) => {
@@ -32,21 +34,23 @@ fetch('https://dog.ceo/api/breeds/list/all')
         //     //     });
         //     // }
         // }
-        createAlbum(dogList);
+        createAlbum(dogList); //called an function for creating the album
     });
-
+//function for removing the child nodes
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
 }
 
+//function for the creation of the image album
+
 async function createAlbum(names) {
-    console.log("siree");
+    // console.log("siree");
     var len = names.length;
-    console.log("length when I reached", len);
+    // console.log("length when I reached", len);
     const mainDiv = document.getElementById('images');
-   
+   //if childnodes existed for the main div delete those nodes
     if (mainDiv.hasChildNodes) {
         removeAllChildNodes(mainDiv);
     }
@@ -57,9 +61,10 @@ async function createAlbum(names) {
         //         // console.log(img)
         //         imegs.src = img.message;
         //     })
-        const imgDiv = document.createElement('div');
+        const imgDiv = document.createElement('div'); //creating the sub divs for the image 
         const imegs = document.createElement('img');
     
+        // fetching the images of the dogs using the url and if htere is no url set the url
         if (!names[i].url) {
             let res = await fetch('https://dog.ceo/api/breed/' + names[i].name + '/images/random');
             if (res && res.ok) {
@@ -67,6 +72,7 @@ async function createAlbum(names) {
             }
         }
         imegs.src = names[i].url;
+        // setting the url for displaying the image
         imgDiv.appendChild(imegs)
         mainDiv.appendChild(imgDiv)
         imgDiv.setAttribute('style', 'max-width:300px;max-height:300px;')
@@ -78,7 +84,7 @@ async function createAlbum(names) {
     }
 
 }
-
+//search filter  uso=ing the input event and the filter function
 let searchBox = document.getElementById("searchin");
 searchBox.addEventListener("input", () => {
     let searchText = searchBox.value;
