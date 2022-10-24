@@ -5,6 +5,7 @@
         ul{
         list-style: none;
         display: flex;
+        justify-content: center;
         .logo{
             width:70px;
             height:70px;
@@ -13,6 +14,7 @@
             font-family: 'Courier New', Courier, monospace;
             font-size: x-large;
         }
+        
         .form_li{
             .fa-search{
                 position: absolute;
@@ -21,6 +23,9 @@
             }
             .search{
                 padding-left: 80px;
+                @media only screen and(max-width:768px){
+                    display: none;
+                }
                 .search_box{
                     margin-top: 20px;
                     width: 30rem;
@@ -39,7 +44,9 @@
 .images{
     display: grid;
     // grid-template-columns: repeat( auto-fill, 2fr);
-    grid-template-columns: repeat(5,15fr);
+    // grid-template-columns: repeat(5,5fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    // grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr) 150px;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     

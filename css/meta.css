@@ -7,6 +7,7 @@
 * .navbar ul {
   list-style: none;
   display: flex;
+  justify-content: center;
 }
 * .navbar ul .logo {
   width: 70px;
@@ -24,6 +25,11 @@
 * .navbar ul .form_li .search {
   padding-left: 80px;
 }
+@media only screen and (max-width: 768px) {
+  * .navbar ul .form_li .search {
+    display: none;
+  }
+}
 * .navbar ul .form_li .search .search_box {
   margin-top: 20px;
   width: 30rem;
@@ -33,7 +39,7 @@
 }
 * .images {
   display: grid;
-  grid-template-columns: repeat(5, 15fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-row-gap: 10px;
   grid-column-gap: 10px;
 }/*# sourceMappingURL=meta.css.map */
